@@ -29,7 +29,7 @@ const ContactUsPage = () => {
             message: formData.message
         }
 
-        axios.post('/contact', newContact)
+        axios.post('https://plants-detection-backend-vercel.vercel.app/contact', newContact)
 
         setIsSent(true);
 

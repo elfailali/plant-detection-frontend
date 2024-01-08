@@ -29,7 +29,7 @@ const Result = () => {
   }])
 
   useEffect(() => {
-    fetch("/plants").then(res => {
+    fetch("https://plants-detection-backend-vercel.vercel.app/plants").then(res => {
       if(res.ok){
         return res.json()
       }
@@ -41,7 +41,7 @@ const Result = () => {
     });
   })
 
-  // console.log("plants "+ plants)
+  console.log("plants "+ plants)
 
   const updateDiagnosisResult = () => {
     const matchingPlant = plants.find(plant => plant.nameID === plantClass);
