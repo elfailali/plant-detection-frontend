@@ -6,18 +6,19 @@ const HeaderHome = () => {
   const [searchBoxVisibility, setSearchBoxVisibility] = useState(false);
 
   return (
-    <header className="bg-white shadow-md py-4 bg-lime-50">
-      <div className="container mx-auto flex items-center justify-between px-6 md:px-16">
-        <Link to="/" className="flex-none w-12">
+    <header className="sticky items-center drop-shadow-lg border-b z-10 m-auto top-0 animated bg-white flex w-full flex-col justify-center px-16 py-2 max-md:max-w-full max-md:px-5">
+      <div className="cgitontainer mx-auto flex items-center justify-between px-6 md:px-16">
+        <Link to="/" className="flex-none w-20">
           <img src={kachflogo} alt="Logo" className="w-full" />
         </Link>
 
         <div className="flex items-center space-x-6 ml-auto">
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center font-semibold space-x-10">
             <NavLink to="/library" label="Library" />
             <NavLink to="/news" label="News" />
             <NavLink to="/history" label="History" />
             <NavLink to="/contact" label="Contact" />
+            <NavLink to="/api" label="Api" />
           </div>
 
           <button
@@ -27,19 +28,6 @@ const HeaderHome = () => {
             <i className="fi fi-rr-search text-xl"></i>
           </button>
 
-          <Link
-            className="btn-dark py-2 px-4 bg-green-500 hover:bg-green-600 transition duration-300 text-white rounded-full focus:outline-none focus:ring focus:border-blue-300"
-            to="/signin"
-          >
-            Sign In
-          </Link>
-
-          <Link
-            className="btn-light py-2 px-4 hidden md:block bg-gray-200 hover:bg-gray-300 transition duration-300 text-gray-700 rounded-full focus:outline-none focus:ring focus:border-blue-300"
-            to="/signup"
-          >
-            Sign Up
-          </Link>
         </div>
 
         {/* Search Box (Mobile) */}
