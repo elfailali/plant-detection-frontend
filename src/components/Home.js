@@ -1,4 +1,5 @@
 import React from 'react';
+import FooterHome from './FooterHome';
 // import LandingPage from '../images/landingpage.jpeg';
 import LandingPage from '../images/homeimagee.jpeg';
 
@@ -63,7 +64,7 @@ function Home() {
   return (
     // style={styles.app}
     <div>
-      <div  className='bg-gradient-to-t from-lime-300 to-lime-50 pt-16'>
+      <div  className='bg-gradient-to-t from-lime-300 to-lime-50 pt-16 '>
         <main style={styles.main} className=' grid  content-center'>
           <div style={styles.landingContainer}>
             {/* <img src={LandingPage} alt="Landing Page Image" style={styles.landingImage} className='' /> */}
@@ -76,13 +77,15 @@ function Home() {
 
           <div className="md:w-1/2 text-left text-zinc-900">
             <h2 className="text-4xl  md:text-5xl lg:text-6xl font-bold mb-4">
-            Kachf: an AI-powered WebSite for Plant Disease Detection
+              Kachf: an AI-powered WebSite for Plant Disease Detection            
             </h2>
-            <p className="text-lg mb-6 mt-4 leading-7">identifies your plant diseases and improve productivity and get farming knowledge for free.</p>
+            <p className="text-lg mb-6 mt-4 leading-7">
+              identifies your plant diseases and improve productivity and get farming knowledge for free.            
+            </p>
             <a href="/GetDiagnostic" className="bg-indigo-600 hover:bg-indigo-800 text-white px-8 py-4 rounded-full text-lg transition duration-300 inline-block">
               Get a free diagnosis
             </a>
-          </div>
+          </div>
 
 
         </main>
@@ -120,7 +123,7 @@ function Home() {
             <div className="text-gray-500 text-sm">
               IT Student | Morocco
             </div>
-          </div>
+          </div>
 
           <div className=" p-6 rounded-lg shadow-md text-center">
             <img
@@ -137,7 +140,7 @@ function Home() {
             <div className="text-gray-500 text-sm">
             Agronomist | Morocco
             </div>
-          </div>
+          </div>
 
           <div className=" p-6 rounded-lg shadow-md text-center">
             <img
@@ -154,7 +157,7 @@ function Home() {
             <div className="text-gray-500 text-sm">
             Farmer | Tunis
             </div>
-          </div>
+          </div>
           
         </div>
       </div>
@@ -166,4 +169,3 @@ function Home() {
 }
 
 export default Home;
-
