@@ -31,7 +31,7 @@ export default function GetDiagnostic() {
         let formData = new FormData();
         formData.append("file", selectedFile);
         // Call API
-        console.log("START REQUEST ...", formData)
+        console.log("START REQUEST ...")
         let res = await axios({
           method: "post",
           url: process.env.REACT_APP_API_URL,
@@ -60,7 +60,7 @@ export default function GetDiagnostic() {
         return;
       }
       const objectUrl = URL.createObjectURL(selectedFile);
-      console.log("object url:", objectUrl)
+      // console.log("object url:", objectUrl)
       setPreview(objectUrl);
     }, [selectedFile]);
   
@@ -75,7 +75,7 @@ export default function GetDiagnostic() {
     // Whene we click the upload button
     const handleImageChange = (event) => {
       if (!event || event.length === 0) {
-        console.log("The Selected file:");
+        // console.log("The Selected file:");
         setSelectedFile(undefined);
         setImage(false);
         setData(undefined);
@@ -84,7 +84,7 @@ export default function GetDiagnostic() {
       setSelectedFile(event.target.files[0]);
       setData(undefined);
       setImage(true);
-      console.log("The Selected file: >>>>>>", selectedFile);
+      // console.log("The Selected file: >>>>>>", selectedFile);
     };
 
     if (data) {
@@ -96,9 +96,9 @@ export default function GetDiagnostic() {
     }
 
     // 
-    const handleTakePicture = async () => {
+    // const handleTakePicture = async () => {
 
-    };
+    // };
       
     const handleUploadButtonClick = () => {
           fileInputRef.current.click();
