@@ -47,8 +47,8 @@ const ContactUsPage = () => {
 
     return (
         <div className="bg-gray-100 min-h-screen bg-gradient-to-t from-lime-400 to-lime-50 p-6 backdrop-blur-sm">
-            <main className="container mx-auto my-4 ">
-                <div className="bg-white rounded-lg shadow p-6 ">
+            <main className="container mx-auto my-4 bg-white rounded-lg shadow p-6  md:flex md:justify-center md:gap-4">
+                <div className="bg-white grow ">
                     <h2 className="font-bold text-slate-800 text-center text-5xl font-bold leading-7 grow shrink basis-auto max-md:max-w-full max-md:text-4xl max-md:leading-6">Contact Us</h2>
 
                     <form onSubmit={handleSubmit}>
@@ -107,6 +107,52 @@ const ContactUsPage = () => {
                     )}
                     </form>
                 </div>
+                {/*  */}
+                <hr className='m-6'/>
+                <div className=" pl-6 flex items-stretch justify-center bg-white">
+                    <ul className="mb-6 md:mb-0">
+                        <li className="flex">
+                            <div className="flex h-10 w-10 items-center justify-center rounded bg-blue-900 text-gray-50">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="h-6 w-6">
+                                    <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                                    <path
+                                        d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="ml-4 mb-4">
+                                <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 ">Our Address</h3>
+                                <p class="text-gray-600 ">BP 575, Avenue Abdelkrim Khattabi, 40000,</p>
+                                <p class="text-gray-600 ">Guéliz-Marrakech</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <div class="flex h-10 w-10 items-center justify-center rounded bg-blue-900 text-gray-50">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="h-6 w-6">
+                                    <path
+                                        d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2">
+                                    </path>
+                                    <path d="M15 7a2 2 0 0 1 2 2"></path>
+                                    <path d="M15 3a6 6 0 0 1 6 6"></path>
+                                </svg>
+                            </div>
+                            <div className="ml-4 mb-4">
+                                <h3 className="mb-2 text-lg font-medium leading-6 text-gray-900">Contact
+                                </h3>
+                                <p className="text-gray-600 ">Mobile: +212 600-000000 (Not yet)</p>
+                                <p className="text-gray-600  underline decoration-indigo-500">Mail: 
+                                    <a href="mailto:el.failali.lbalghiti@gmail.com" className='hover:text-blue-900 '> el.failali.lbalghiti@gmail.com</a> 
+                                </p>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
             </main>
         </div>
     );

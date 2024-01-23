@@ -12,7 +12,7 @@ const Api = () => {
 
     return (
         <div className="bg-gradient-to-t from-lime-50 to-lime-50 ">
-          <div className=" flex w-full flex-col justify-center items-center mt-0 px-16 py-12 max-md:max-w-full max-md:mt-10 max-md:px-5">
+          <div className=" flex w-full flex-col justify-center items-center mt-0 px-16 py-12 max-md:max-w-full max-md:px-5">
             <div className="flex w-full max-w-[1200px] flex-col mb-8 items-end max-md:max-w-full">
 
 

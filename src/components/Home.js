@@ -17,20 +17,6 @@ function Home() {
       display: 'flex',
       flexDirection: 'column',
     },
-    main: {
-      padding: '20px',
-      flex: 1,
-      display: 'flex',
-      justifyContent: 'space-around',
-      alignItems: 'center',
-    },
-    landingContainer: {
-      width: '45%', // Ajustez la largeur selon vos besoins
-      height: 'auto',
-      minHeight: '500px',
-      borderRadius: '12px', // Coins arrondis
-      overflow: 'hidden', // Cache tout ce qui dépasse les coins arrondis
-    },
     landingImage: {
       width: '100%', // Image prend 100% de la largeur du conteneur
       height: 'auto', // Cela garantit que l'aspect ratio est préservé
@@ -52,29 +38,24 @@ function Home() {
       marginTop: '20px',
       display: 'inline-block',
       fontSize: '1.2em', // Taille du texte du bouton augmentée
-    },
-    // headerFooter: {
-    //   backgroundColor: '#333',
-    //   color: 'white',
-    //   padding: '50px',
-    // },
+    }
   };
 
   return (
     // style={styles.app}
     <div>
-      <div  className='bg-gradient-to-t from-lime-300 to-lime-50 pt-16'>
-        <main style={styles.main} className=' grid  content-center'>
-          <div style={styles.landingContainer}>
+      <div  className='bg-gradient-to-t from-lime-300 to-lime-50 pt-8'>
+        <main style={styles.main} className=' lg:flex items-center content-center p-4 lg:p-16'>
+          <div style={styles.landingContainer} className='lg:w-2/4'>
             {/* <img src={LandingPage} alt="Landing Page Image" style={styles.landingImage} className='' /> */}
             <img
               loading="lazy"
-              srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/35d9f20f853ce4e9cedf49e4fd4adee40c8a5edbecf39420e07e40249a690c17?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/35d9f20f853ce4e9cedf49e4fd4adee40c8a5edbecf39420e07e40249a690c17?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/35d9f20f853ce4e9cedf49e4fd4adee40c8a5edbecf39420e07e40249a690c17?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/35d9f20f853ce4e9cedf49e4fd4adee40c8a5edbecf39420e07e40249a690c17?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/35d9f20f853ce4e9cedf49e4fd4adee40c8a5edbecf39420e07e40249a690c17?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/35d9f20f853ce4e9cedf49e4fd4adee40c8a5edbecf39420e07e40249a690c17?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/35d9f20f853ce4e9cedf49e4fd4adee40c8a5edbecf39420e07e40249a690c17?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/35d9f20f853ce4e9cedf49e4fd4adee40c8a5edbecf39420e07e40249a690c17?apiKey=49a8e08e74bb44d9affdaac81f6699af&"
+              srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/35d9f20f853ce4e9cedf49e4fd4adee40c8a5edbecf39420e07e40249a690c17?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=400 400w"
               className="aspect-[1.52] object-contain object-center w-[939px] shadow-sm overflow-hidden self-center z-[1] max-w-full"
             />
           </div>
 
-          <div className="md:w-1/2 text-left text-zinc-900">
+          <div className=" text-left text-zinc-900 lg:pl-4">
             <h2 className="text-4xl  md:text-5xl lg:text-6xl font-bold mb-4">
             Kachf: an AI-powered WebSite for Plant Disease Detection
             </h2>

@@ -25,7 +25,7 @@ export default function GetDiagnostic() {
     const sendFile = async () => {
 
       if (image && process.env.REACT_APP_API_URL) {
-        console.log("API LINK ...", process.env.REACT_APP_API_URL)
+        // console.log("API LINK ...", process.env.REACT_APP_API_URL)
 
 
         let formData = new FormData();
@@ -106,19 +106,19 @@ export default function GetDiagnostic() {
     
   return (
     <>
-      <div className='bg-gradient-to-t from-lime-400 to-lime-50 flex flex-row py-20'>  
-        <div className=' rightComponent '>
-        <div className="items-center self-stretch flex flex-col justify-center px-16 py-4 max-md:max-w-full max-md:px-5">
-              <div className="flex w-[686px] max-w-full flex-col items-stretch">
-                <h2 className="max-w-[684px] text-zinc-900 text-start text-5xl font-semibold leading-[57px] max-md:max-w-full">
-                  Plant Disease Detection
-                </h2>
-                <h4 className="justify-start self-start mt-4 text-zinc-800 text-start text-lg leading-7 max-w-[582px] max-md:max-w-full">
-                  We cannot allow your plants to suffer from disorders and various diseases damages. Let’s begin identifies your plant diseases and improve productivity and get
-                  farming knowledge for free.
-                </h4>
-              </div>
-        </div>
+      <div className='bg-gradient-to-t from-lime-400 to-lime-50 lg:flex flex-row py-20'>  
+        <div>
+          <div className="items-center self-stretch flex flex-col justify-center px-16 py-4 max-md:max-w-full max-md:px-5">
+                <div className="flex w-[686px] max-w-full flex-col items-stretch">
+                  <h2 className="max-w-[684px] text-zinc-900 text-start text-5xl font-semibold leading-[57px] max-md:max-w-full">
+                    Plant Disease Detection
+                  </h2>
+                  <h4 className="justify-start self-start mt-4 text-zinc-800 text-start text-lg leading-7 max-w-[582px] max-md:max-w-full">
+                    We can not allow your plants to suffer from disorders and various diseases damages. Let’s begin detect your plant diseases and improve productivity and get
+                    farming knowledge for free.
+                  </h4>
+                </div>
+          </div>
 
       {/* <div className='flex justify-center '>
         <img  src='https://petapixel.com/assets/uploads/2019/06/identifynaturefeattt.jpg' className="h-full me-2 rounded-lg shadow-sm overflow-hidden self-center max-w-full"  width={600} height={500}></img>
@@ -126,7 +126,7 @@ export default function GetDiagnostic() {
 
 
 
-      <div className="flex items-start justify-start  mx-16 ">
+      <div className="flex items-start justify-center  mx-16 ">
           {/* <div className='py-2 px-20  '>
               <button onClick={handleTakePicture}  className=" bg-blue-700 text-white font-bold rounded hover:bg-blue-800  py-2 px-4 mt-2">
 
@@ -163,19 +163,21 @@ export default function GetDiagnostic() {
             </div>
           } 
           {isLoading && 
-                  <CardContent className='flex flex-col items-center w-16	justify-center ml-16 items-center'>
+
+                  <CardContent className='flex flex-col items-center w-16	justify-center'>
                       <CircularProgress  className='bg-midnight'/>
                       <Typography variant="h6" noWrap>
-                        Processing
+                        Processing (Please wait a few moments)
                       </Typography>
                   </CardContent>
-                }
+            }
       </div>
 
 
       </div>
 
-      <div className=" left flex flex-col items-stretch w-6/12  max-md:w-full max-md:ml-0">
+      {/* The illustation div */}
+      <div className="flex flex-col items-stretch w-6/12  max-lg:w-full ">
             <img
               loading="lazy"
               srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/5b0e2edb2e7cf0c0ad339c62113cc3eb17f3341b60166d4b772520720f6d8cf2?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/5b0e2edb2e7cf0c0ad339c62113cc3eb17f3341b60166d4b772520720f6d8cf2?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/5b0e2edb2e7cf0c0ad339c62113cc3eb17f3341b60166d4b772520720f6d8cf2?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/5b0e2edb2e7cf0c0ad339c62113cc3eb17f3341b60166d4b772520720f6d8cf2?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/5b0e2edb2e7cf0c0ad339c62113cc3eb17f3341b60166d4b772520720f6d8cf2?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/5b0e2edb2e7cf0c0ad339c62113cc3eb17f3341b60166d4b772520720f6d8cf2?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/5b0e2edb2e7cf0c0ad339c62113cc3eb17f3341b60166d4b772520720f6d8cf2?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/5b0e2edb2e7cf0c0ad339c62113cc3eb17f3341b60166d4b772520720f6d8cf2?apiKey=49a8e08e74bb44d9affdaac81f6699af&"

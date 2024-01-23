@@ -1,57 +1,56 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import kachflogo from '../images/Kachf_Logo/2.png';
+import kachfLogo2 from '../images/Kachf_Logo/2.png'
 
 const HeaderHome = () => {
-  const [searchBoxVisibility, setSearchBoxVisibility] = useState(false);
-
   return (
-    <header className="sticky items-center drop-shadow-lg border-b z-10 m-auto top-0 animated bg-white flex w-full flex-col justify-center px-16 py-2 max-md:max-w-full max-md:px-5">
-      <div className="container mx-auto flex items-center justify-between px-6 md:px-16">
-        <Link to="/" className="flex-none w-20">
-          <img src={kachflogo} alt="Logo" className="w-full" />
-        </Link>
+    <header  className="sticky items-center drop-shadow-lg border-b z-10 m-auto top-0 animated bg-white flex w-full flex-col justify-center px-16 py-2 max-md:max-w-full max-md:px-5">
 
-        <div className="flex items-center space-x-6 ml-auto">
-          <div className="hidden md:flex items-center font-bold space-x-10">
-            <NavLink to="/" label="Home" />
-            <NavLink to="/library" label="Library" />
-            <NavLink to="/news" label="News" />
-            <NavLink to="/contact" label="Contact" />
-            <NavLink to="/api" label="Api" />
+      <div className=" flex justify-center w-full max-w-[1140px]  max-md:max-w-full max-md:flex-wrap ">
+        <div className="flex items-stretch bg-white justify-between gap-5 my-auto max-md:max-w-full max-md:flex-wrap flex justify-center">
+          <Link to="/" className='flex items-center	'>
+            <img src={kachfLogo2} alt="Logo"  className='w-20'/>
+          </Link>
+
+          <div className="items-stretch flex justify-between justify-end gap-5 px-8 self-end flex flex-col mt-4 font-medium sm:flex-row lg:mt-0  max-sm:m-0 max-sm:gap-1">
+            <div className="text-stone-800 text-m grow whitespace-nowrap font-semibold max-sm:hidden">
+              <Link to="/">
+                Home
+              </Link>
+            </div>
+            <div className="text-stone-800 text-m font-semibold max-sm:hidden">
+              <Link to="/library">
+                Library
+              </Link>
+            </div>
+            <div className="text-stone-800 text-m font-semibold">
+              <Link to="/news">
+                News 
+              </Link>
+            </div>
+            {/* <div className="text-stone-800 text-m font-semibold">
+              <Link to="/History">
+                History
+              </Link>
+            </div> */}
+            <div className="text-stone-800 text-m font-semibold">
+              <Link to="/Contact">
+                Contact Us
+              </Link>
+            </div>
+              <div className="text-stone-800 text-m grow whitespace-nowrap font-semibold">
+                <Link to="/api">
+                  API
+                </Link>
+              </div>
           </div>
-
-          <button
-            className="md:hidden bg-gray-200 w-12 h-12 rounded-full flex items-center justify-center focus:outline-none focus:ring focus:border-blue-300 hover:bg-gray-300 transition duration-300"
-            onClick={() => setSearchBoxVisibility(!searchBoxVisibility)}
-          >
-            <i className="fi fi-rr-search text-xl"></i>
-          </button>
-
         </div>
 
-        {/* Search Box (Mobile) */}
-        {searchBoxVisibility && (
-          <div className="md:hidden absolute top-full left-0 mt-2.5 bg-white border-b border-gray-300 w-full p-4">
-            <input
-              type="text"
-              placeholder="Search"
-              className="w-full bg-gray-100 p-2 rounded-full placeholder-gray-500 focus:outline-none focus:ring focus:border-blue-300"
-            />
-          </div>
-        )}
       </div>
+
+
     </header>
   );
 };
-
-const NavLink = ({ to, label }) => (
-  <Link
-    to={to}
-    className="text-gray-700 hover:text-gray-900 transition duration-300 focus:outline-none focus:ring focus:border-blue-300"
-  >
-    {label}
-  </Link>
-);
 
 export default HeaderHome;

@@ -1,4 +1,3 @@
-import React from 'react';
 import RosierSain from '../images/rosiersain.jpeg';
 import RosierMalade from '../images/rosiermalade.jpeg';
 import OrchidSain from '../images/orchidsain.jpeg';
@@ -18,7 +17,6 @@ import FersMalade from '../images/fernsmalade.jpeg';
 import TulipomaniaSain from '../images/tulipomaniasain.jpeg';
 import TulipomaniaMalade from '../images/Tulipomaniamalade.jpeg';
 import BonsaiSain from '../images/bonsaisain.jpeg';
-import Bonsai from '../images/bonsaimalade.jpeg';
 
 // Assume 'blogs' is defined in the same file or imported from another module
 const blogs = [
