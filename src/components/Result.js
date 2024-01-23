@@ -40,7 +40,6 @@ const Result = () => {
     updateDiagnosisResult();
   }, [plants, plantClass]);
 
-  console.log("plants "+ plants)
 
   const updateDiagnosisResult = () => {
     const matchingPlant = plants.find(plant => plant.nameID === plantClass);
@@ -60,7 +59,6 @@ const Result = () => {
       })
     }
 
-    console.log("setDiagnosisResult "+ diagnosisResult.description)
 
   };
   
